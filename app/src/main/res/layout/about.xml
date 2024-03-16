@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="30dp"
+    tools:context=".about"
+    android:orientation="vertical"
+    >
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/about"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:textStyle="bold">
+
+         </TextView>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/lato"
+            android:text="Selamat datang di Aplikasi Detektor Penyakit Tanaman Jeruk!  Aplikasi ini diciptakan dengan tujuan membantu petani, tukang kebun, dan pecinta tanaman jeruk dalam mengidentifikasi dan mengatasi penyakit yang menyerang tanaman mereka."
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView3"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/lato"
+            android:text="Aplikasi Detektor Penyakit Tanaman adalah hasil dari kolaborasi antara ilmu pengetahuan dua bidang, pertanian dan teknologi informasi. Aplikasi ini menggunakan kecerdasan buatan dan teknologi pengenalan gambar untuk mengidentifikasi penyakit tanaman berdasarkan gambar yang disorot oleh pengguna. Aplikasi ini juga menyediakan informasi rinci tentang gejala penyakit, penyebab, dan langkah-langkah pencegahan serta pengobatannya."
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:focusableInTouchMode="false"
+            android:fontFamily="@font/lato"
+            android:text="Bagaimana Cara Kerja Aplikasi Ini?"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/lato"
+            android:text="Gunakan kamera ponsel Anda dan sorot ke permukaan daun jeruk yang diduga terkena penyakit. Terdapat tiga jenis penyakit yang bisa dideteksi oleh aplikasi ini, yaitu penyakit canker, karat daun, dan lumut daun jeruk. Berikut penjelasan ketiga penyakit tersebut :"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/lato"
+            android:text="1. Citrus Canker (kanker jeruk) "
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="15dp"
+            android:contentDescription="@string/canker"
+            android:src="@drawable/canker" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/lato"
+            android:text="Kanker jeruk adalah penyakit tanaman jeruk yang disebabkan oleh bakteri X. axonopodis pv. citri. atau disebut juga Citrus Bacterial Canker (CBC). Penyakit ini menyerang daun, ranting, dan buah pohon sitrus, menyebabkan lesi, keropeng. Gejala-gejala ini dapat menyebabkan buah kehilangan nilai komersialnya, serta dapat menyebabkan penurunan produksi dan kualitas buah. Penyakit ini dapat dikendalikan dengan penahan angin, penggunaan bakterisida berbahan dasar tembaga, dan pengendalian hama penggerek daun jeruk. Penyakit ini sangat menular dan dapat menyebar melalui air hujan, angin, dan aktivitas manusia seperti pemangkasan dan peralatan pertanian yang tidak dibersihkan dengan baik. "
+            android:textColor="#000000"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/lato"
+            android:text="2. Citrus Greasy Spot (karat daun jeruk)"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:contentDescription="Citrus Greasy Spot"
+            android:src="@drawable/karat" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/lato"
+            android:text="Citrus Greasy Spot pada jeruk atau yang dikenal juga dengan nama penyakit karat daun adalah penyakit yang disebabkan oleh Mycosphaerel la citri atau sebelumnya disebut Zasmidium citri-griseum. Ciri-ciri penyakit karat daun ini melibatkan gejala-gejala berupa bercak-bercak minyak berwarna gelap yang muncul pada permukaan atas daun. Bercak-bercak ini dapat berukuran kecil hingga besar. Sama halnya dengan lumut daun, daun-daun yang terinfeksi karat daun cenderung mengalami penurunan daya fotosintesis karena lapisan lilin yang berlebihan menghambat penyerapan cahaya matahari. Perawatan untuk penyakit ini cukup mudah. Perawatan terbaik adalah dengan menggunakan salah satu fungisida tembaga yang tersedia dan menyemprot pohon dengan fungisida tersebut. Gunakan fungisida tembaga sesuai petunjuk untuk membunuh jamur pohon jeruk."
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/lato"
+            android:text="3. Citrus Moss (lumut daun jeruk) "
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:contentDescription="Citrus Moss"
+            android:src="@drawable/lumut" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/lato"
+            android:text="Citrus Moss adalah penyakit pada tanaman jeruk yang disebabkan oleh berbagai jenis lumut, seperti Heterochlorella, Sporidiobolus, dan Cladosporium. Penyakit ini dapat dikenali dari gejalanya, seperti pertumbuhan tebal pada struktur daun yang dilapisi oleh lapisan hijau berupa lumut. Hal ini mengakibatkan gangguan pada penerimaan cahaya matahari oleh daun jeruk. Penyakit ini umumnya disebabkan oleh kondisi lingkungan yang memiliki kelembaban tinggi. Pengendalian penyakit ini dapat dilakukan dengan dua cara, yakni melakukan pengikisan lumut secara manual pada daun dan menggunakan penyemprotan fungisida pada daun yang terinfeksi penyakit ini. "
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
