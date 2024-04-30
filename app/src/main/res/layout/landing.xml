@@ -2,8 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/Name"
@@ -12,24 +12,24 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="65dp"
-        android:layout_marginTop="83dp"
-        android:layout_marginEnd="65dp"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="69dp"
+        android:layout_marginEnd="63dp"
         android:gravity="center"
         android:text="@string/purpose"
         android:textSize="25sp" />
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="wrap_content"
-        android:layout_height="200dp"
+        android:layout_width="275dp"
+        android:layout_height="221dp"
         android:layout_below="@+id/Name"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="43dp"
-        android:layout_marginEnd="80dp"
-        app:srcCompat="@drawable/applogo" />
+        android:layout_marginStart="71dp"
+        android:layout_marginTop="78dp"
+        android:layout_marginEnd="65dp"
+        app:srcCompat="@drawable/usu" />
 
     <Button
         android:id="@+id/d_button"
@@ -38,9 +38,9 @@
         android:layout_below="@+id/logo"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="108dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="108dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="117dp"
+        android:layout_marginEnd="110dp"
         android:backgroundTint="#227406"
         android:text="DETECT" />
 
@@ -51,9 +51,9 @@
         android:layout_below="@+id/d_button"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="108dp"
+        android:layout_marginStart="110dp"
         android:layout_marginTop="27dp"
-        android:layout_marginEnd="108dp"
+        android:layout_marginEnd="110dp"
         android:backgroundTint="#227406"
         android:text="ABOUT" />
 

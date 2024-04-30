@@ -2,7 +2,6 @@ package com.surendramaran.yolov8tflite
 
 import android.content.Context
 import android.graphics.Bitmap
-import android.media.FaceDetector.Face.CONFIDENCE_THRESHOLD
 import android.os.SystemClock
 import org.tensorflow.lite.DataType
 import org.tensorflow.lite.Interpreter
@@ -16,7 +15,6 @@ import java.io.BufferedReader
 import java.io.IOException
 import java.io.InputStream
 import java.io.InputStreamReader
-import kotlin.math.min
 
 class Detector(
     private val context: Context,
@@ -41,7 +39,7 @@ class Detector(
     fun setup() {
         val model = FileUtil.loadMappedFile(context, modelPath)
         val options = Interpreter.Options()
-        options.numThreads = 10
+        options.numThreads = 4
         interpreter = Interpreter(model, options)
 
         val inputShape = interpreter?.getInputTensor(0)?.shape() ?: return
@@ -49,6 +47,13 @@ class Detector(
 
         tensorWidth = inputShape[1]
         tensorHeight = inputShape[2]
+
+        // If in case input shape is in format of [1, 3, ..., ...]
+        if (inputShape[1] == 3) {
+            tensorWidth = inputShape[2]
+            tensorHeight = inputShape[3]
+        }
+
         numChannel = outputShape[1]
         numElements = outputShape[2]
 
@@ -85,7 +90,7 @@ class Detector(
 
         val resizedBitmap = Bitmap.createScaledBitmap(frame, tensorWidth, tensorHeight, false)
 
-        val tensorImage = TensorImage(DataType.FLOAT32)
+        val tensorImage = TensorImage(INPUT_IMAGE_TYPE)
         tensorImage.load(resizedBitmap)
         val processedImage = imageProcessor.process(tensorImage)
         val imageBuffer = processedImage.buffer
@@ -94,24 +99,36 @@ class Detector(
         interpreter?.run(imageBuffer, output.buffer)
 
         val bestBoxes = bestBox(output.floatArray)
+        inferenceTime = SystemClock.uptimeMillis() - inferenceTime
+
         if (bestBoxes == null) {
             detectorListener.onEmptyDetect()
             return
         }
 
-        inferenceTime = SystemClock.uptimeMillis() - inferenceTime
         detectorListener.onDetect(bestBoxes, inferenceTime)
     }
 
     private fun bestBox(array: FloatArray) : List<BoundingBox>? {
 
         val boundingBoxes = mutableListOf<BoundingBox>()
+
         for (c in 0 until numElements) {
-            val confidences = (4 until numChannel).map { array[c + numElements * it] }
-            val cnf = confidences.max()
-            if (cnf > CONFIDENCE_THRESHOLD) {
-                val cls = confidences.indexOf(cnf)
-                val clsName = labels[cls]
+            var maxConf = -1.0f
+            var maxIdx = -1
+            var j = 4
+            var arrayIdx = c + numElements * j
+            while (j < numChannel){
+                if (array[arrayIdx] > maxConf) {
+                    maxConf = array[arrayIdx]
+                    maxIdx = j - 4
+                }
+                j++
+                arrayIdx += numElements
+            }
+
+            if (maxConf > CONFIDENCE_THRESHOLD) {
+                val clsName = labels[maxIdx]
                 val cx = array[c] // 0
                 val cy = array[c + numElements] // 1
                 val w = array[c + numElements * 2]
@@ -129,7 +146,7 @@ class Detector(
                     BoundingBox(
                         x1 = x1, y1 = y1, x2 = x2, y2 = y2,
                         cx = cx, cy = cy, w = w, h = h,
-                        cnf = cnf, cls = cls, clsName = clsName
+                        cnf = maxConf, cls = maxIdx, clsName = clsName
                     )
                 )
             }
@@ -183,7 +200,7 @@ class Detector(
         private const val INPUT_STANDARD_DEVIATION = 255f
         private val INPUT_IMAGE_TYPE = DataType.FLOAT32
         private val OUTPUT_IMAGE_TYPE = DataType.FLOAT32
-        private const val CONFIDENCE_THRESHOLD = 0.75F
+        private const val CONFIDENCE_THRESHOLD = 0.3F
         private const val IOU_THRESHOLD = 0.5F
     }
 }

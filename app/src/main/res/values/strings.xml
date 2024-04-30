@@ -23,4 +23,5 @@ Citrus Moss adalah penyakit pada tanaman jeruk yang disebabkan oleh berbagai jen
     <string name="purpose">Aplikasi Deteksi Penyakit Jeruk</string>
     <string name="about">Tentang Aplikasi</string>
     <string name="canker">Citrus Canker</string>
+    <string name="intro">Selamat datang di Aplikasi Detektor Penyakit Tanaman Jeruk! Aplikasi ini diciptakan dengan tujuan membantu petani, tukang kebun, dan pecinta tanaman jeruk dalam mengidentifikasi dan mengatasi penyakit yang menyerang tanaman mereka. Aplikasi ini juga dikembangkan oleh saya, Samuel Parlindungan Malau, NIM 191402092, sebagai hasil dari penelitian yang saya lakukan untuk menyelesaikan tugas akhir perkuliahan saya.</string>
 </resources>
