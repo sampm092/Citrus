@@ -20,7 +20,7 @@ Citrus Greasy Spot pada jeruk atau yang dikenal juga dengan nama penyakit karat 
 Citrus Moss adalah penyakit pada tanaman jeruk yang disebabkan oleh berbagai jenis lumut, seperti Heterochlorella, Sporidiobolus, dan Cladosporium. Penyakit ini dapat dikenali dari gejalanya, seperti pertumbuhan tebal pada struktur daun yang dilapisi oleh lapisan hijau berupa lumut. Hal ini mengakibatkan gangguan pada penerimaan cahaya matahari oleh daun jeruk. Penyakit ini umumnya disebabkan oleh kondisi lingkungan yang memiliki kelembaban tinggi. Pengendalian penyakit ini dapat dilakukan dengan dua cara, yakni melakukan pengikisan lumut secara manual pada daun dan menggunakan penyemprotan fungisida pada daun yang terinfeksi penyakit ini.
 
 </string>
-    <string name="purpose">Aplikasi Deteksi Penyakit Jeruk</string>
+    <string name="purpose">CitriDX</string>
     <string name="about">Tentang Aplikasi</string>
     <string name="canker">Citrus Canker</string>
     <string name="intro">Selamat datang di Aplikasi Detektor Penyakit Tanaman Jeruk! Aplikasi ini diciptakan dengan tujuan membantu petani, tukang kebun, dan pecinta tanaman jeruk dalam mengidentifikasi dan mengatasi penyakit yang menyerang tanaman mereka. Aplikasi ini juga dikembangkan oleh saya, Samuel Parlindungan Malau, NIM 191402092, sebagai hasil dari penelitian yang saya lakukan untuk menyelesaikan tugas akhir perkuliahan saya.</string>
