@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/bg">
 
     <TextView
         android:id="@+id/Name"
@@ -12,14 +13,14 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="66dp"
-        android:layout_marginTop="69dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="75dp"
         android:layout_marginEnd="63dp"
         android:fontFamily="@font/CitrusGothicSolidRegular"
         android:gravity="center"
         android:text="@string/purpose"
         android:textColor="#227406"
-        android:textSize="45sp" />
+        android:textSize="60sp" />
 
     <ImageView
         android:id="@+id/logo"
