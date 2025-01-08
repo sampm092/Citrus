@@ -16,7 +16,7 @@
         android:theme="@style/Theme.YOLOv8TfLite"
         tools:targetApi="31">
         <activity
-            android:name=".landing"
+            android:name=".Landing"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,14 +24,20 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".Feature"
+            android:exported="true">
+
+        </activity>
+        <activity
             android:name=".Activity_main"
             android:exported="true">
         </activity>
         <activity
-            android:name=".about"
+            android:name=".About"
             android:exported="true">
 
         </activity>
+
 
         <meta-data
             android:name="preloaded_fonts"
