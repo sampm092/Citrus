@@ -7,12 +7,12 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
 class Landing : AppCompatActivity() {
-    var DButton: Button? = null
+    private var dButton: Button? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.landing)
-        DButton = findViewById<View>(R.id.d_button) as Button
-        DButton!!.setOnClickListener {
+        dButton = findViewById<View>(R.id.d_button) as Button
+        dButton!!.setOnClickListener {
             val intent = Intent(this@Landing, Feature::class.java)
             startActivity(intent)
         }
